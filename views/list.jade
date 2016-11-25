@@ -1,0 +1,14 @@
+.row
+    .col-md-6
+        h2
+            | Notes
+    .col-md-3
+    .col-md-2
+        a.btn.btn-default(style='margin-top:20px', href='#/users/{{notes[0]._id}}/notes/new') New
+    .col-md-1
+.container
+    table.table.table-hover
+        tbody
+            tr(ng-repeat="note in notes[0].notes")
+                td
+                    a(ng-href='#/users/{{notes[0]._id}}/notes/{{note.title}}') {{ note.title }}

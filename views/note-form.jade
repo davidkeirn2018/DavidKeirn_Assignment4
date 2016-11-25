@@ -1,0 +1,13 @@
+.row(ng-hide='editMode')
+    .col-md-6
+        h2 Create new note
+.container
+    p
+        label Title
+        input.form-control(type='text', ng-model='note.title', required='')
+    p
+        label Contents
+        textarea.form-control(ng-model='note.contents', required='')
+    p
+        button.btn.btn-default(style='margin-top:20px', ng-click='saveNote(note)') Save
+        button.btn.btn-default(style='margin-top:20px', ng-click='back()') Back
